@@ -1,0 +1,245 @@
+/*	Toggle Menu
+-------------------------*/
+.navbar-toggler {
+	width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 15px;
+	background: $px-theme;
+	border: none;
+	.header-transparent-white & {
+		background: $px-white;
+	}
+	span {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    width: 25px;
+	    height: 2px;
+	    margin: auto;
+	    box-shadow: 0px -8px 0 0px currentColor, 0px 8px 0 0px currentColor;
+		background: $px-white;
+		color: $px-white;
+		.header-transparent-white & {
+			background: $px-dark;
+			color: $px-dark;
+		}
+	}
+}
+
+
+
+.header-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid rgba($px-white, 0.16);
+	z-index: 10;
+	&.fixed-header {
+		background: $px-white;
+		box-shadow: rgba(58,78,95,0.2) 0 10px 16px, rgba(58,78,95,0.05) 0 -5px 16px;
+	}
+}
+
+.main-navbar {
+	padding: 0;
+	.logo-text {
+	    font-size: 22px;
+	    font-weight: 600;
+	    line-height: 32px;
+	    color: $px-white;
+	    display: inline-block;
+	    .fixed-header & {
+			color: $px-theme;
+		}
+	}
+	.logo-dark {
+		display: none;
+		.fixed-header & {
+			display: block;
+		}
+	}
+	.logo-light  {
+		.fixed-header & {
+			display: none;
+		}	
+	}
+	@include up-md {
+		.navbar-nav {
+			> li {
+				margin:0 0 0 30px;
+				&.mm-in {
+					> a {
+						position: relative;
+						padding-right: 15px;
+						&:after {
+							content:"";
+							position: absolute;
+							width: 6px;
+							height: 6px;
+							border-bottom: 1px solid currentColor;
+							border-right: 1px solid currentColor;
+							@include rotate(45);
+							right: 0;
+							top: -5px;
+							bottom: 0;
+							margin: auto;
+							@include down-md {
+								display: none;
+							}
+						}
+					}
+				}
+				> a {
+			        font-size: 15px;
+				    font-weight: 600;
+				    padding: 0 !important;
+				    line-height: 70px;
+				    display: block;
+				    color: $px-white;
+				    position: relative;
+				    .fixed-header &{
+				    	color: $px-dark;
+				    }
+				    &:after {
+				    	content:"";
+				    	position: absolute;
+				    	bottom: -1px;
+				    	right: 0;
+				    	width: 0px;
+				    	@include transition(ease all 0.35s);
+				    	height: 3px;
+				    	background: $px-white;
+				    	.fixed-header & {
+				    		background: $px-theme;
+				    	}
+				    }
+				    &:hover,
+				    &.active {
+				    	.fixed-header &{
+				    		color: $px-dark;
+				    	}
+				    	&:after {
+				    		width:100%;
+				    		right: auto;
+				    		left: 0;
+				    	}
+				    }
+				}
+			}
+		}
+	}
+}
+
+/* Side Menu
+-----------------------------*/
+.header-nav-left {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 200px;
+	overflow: hidden;
+	background: $px-dark;
+	.scroll-in {
+		overflow: auto;	
+		height: 100vh;
+		width: 220px;
+		padding-right: 20px;
+		overflow: -moz-scrollbars-none;
+		 -ms-overflow-style: none;
+		&::-webkit-scrollbar { width: 0 !important }
+	}
+	.navbar-collapse {
+		display: block;
+		-ms-flex: 1 1 auto;
+    	flex: 1 1 auto;
+	}
+	.navbar-toggler {
+		display: none;
+	}
+	.header-logo {
+		width: 100%;
+		a {
+			display: block;
+		}
+		label {
+			width: 100%;
+			background: $px-dark;
+			margin: 0;
+			padding: 10px;
+			text-align: center;
+			color: $px-white;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+	.navbar-nav {
+		> li {
+			.nav-link {
+			    padding: 10px;
+			    color: $px-white;
+			    font-size: 14px;
+			    text-transform: uppercase;
+			    font-weight: 600;
+			    i {
+			    	width: 22px;
+			    }
+			    &.active {
+			    	background: $px-theme;
+			    }
+			}
+			&:hover {
+				.nav-link {
+					background: $px-theme;
+				}
+			}
+		}
+	}
+}
+
+/* Responsive Menu
+-----------------------------*/
+@include down-md {
+	.main-navbar {
+		padding: 10px 15px;
+		> .container {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.navbar-collapse {
+		    position: absolute;
+		    top: 100%;
+		    left: 0;
+		    right: 0;
+		    background: $px-white;
+	        max-height: 80vh;
+		    overflow-y: auto;
+		}
+		.navbar-nav {
+			> li  {
+				margin: 0;
+				border-top:1px solid #e6e6e6;
+		    	> a {
+				    text-transform: uppercase;
+					font-size: 13px;
+					font-weight: 700;
+					padding: 0 15px;
+    				line-height: 40px;
+					display: block;
+					color: $px-dark;
+					&.active {
+						color: $px-theme;
+					}
+		    	}
+			}
+		}
+	}
+}

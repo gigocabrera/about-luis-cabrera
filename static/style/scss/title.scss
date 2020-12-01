@@ -1,0 +1,156 @@
+.section-title {
+	h2 {
+        font-weight: 600;
+	    font-size: 32px;
+	    margin: 0;
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: top;
+	    &:after {
+	    	width: 60px;
+		    height: 3px;
+		    background: $px-dark;
+		    content: "";
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    bottom: -10px;
+	    }
+	}
+	&.left {
+		h2 {
+			&:after {
+				right: auto;
+			}
+		}
+	}
+	h3 {
+        font-weight: 700;
+	    font-size: 35px;
+	    margin: 0;
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: top;
+	}
+	p {
+		margin: 15px 0 0;
+	}
+	h4 {
+        font-weight: 700;
+	    font-size: 35px;
+	    margin: 0;
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: top;
+	    padding: 0 0 15px;
+		.st-line {
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    width: 60px;
+		    height: 2px;
+		    background: $px-theme;
+		    margin: auto;
+		    &:after {
+	    	    content: "";
+			    position: absolute;
+			    width: 15px;
+			    height: 15px;
+			    background: #fff;
+			    border-radius: 50%;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			    left: 0;
+			    right: 0;
+			    border: 2px solid $px-theme;
+		    }
+		}	    
+	}
+}
+
+.sm-title {
+	position: relative;
+	h5{
+	    font-size: 28px;
+		font-weight: 600;
+		position: relative;
+	}
+	i {
+	    position: absolute;
+	    font-size: 60px;
+	    top: -9px;
+	    right: 0;
+	    opacity: 0.1;
+	}
+}
+
+.page-title {
+	padding: 160px 0 100px;
+	h1,
+	.h1 {
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+}
+
+/* ----------------------
+*	Sub Title
+---------------------------*/
+.sub-title {
+	h3 {
+        font-size: 20px;
+	    margin: 0 0 25px;
+	    padding: 0 0 15px;
+	    border-bottom: 1px solid #ddd;
+	    font-weight: 600;
+	}
+}
+
+/* Breadcrumbs
+--------------------------------*/
+.breadcrumb {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: none;
+	border-radius: 0;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		font-weight: 400;
+		position: relative;
+		color: $px-dark;
+		+ li {
+			padding-left: 17px;
+			margin-left: 17px;
+			&:after {
+				content:"";
+				position: absolute;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: currentColor;
+				opacity: 0.5;
+				left: -2px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+		a {
+			color: $px-dark;
+		}
+	}
+	&.white {
+		li {
+			color: $px-white;
+			a {
+				color: $px-white;
+			}
+		}	
+	}
+}
