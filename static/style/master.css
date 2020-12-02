@@ -305,6 +305,10 @@ mark {
   padding: 0;
   color: currentColor; }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* ----------------------
 *	Loading
 ---------------------------*/
@@ -351,15 +355,15 @@ mark {
 ---------------------------*/
 .h1,
 h1 {
-  font-size: 50px; }
+  font-size: 70px; line-height: 78px; font-weight: 700;}
   @media (max-width: 991px) {
     .h1,
     h1 {
-      font-size: 40px; } }
+      font-size: 64px; line-height: 72px; font-weight: 700;} }
   @media (max-width: 767px) {
     .h1,
     h1 {
-      font-size: 35px; } }
+      font-size: 50px; line-height: 58px; font-weight: 700;} }
 
 .h2,
 h2 {
