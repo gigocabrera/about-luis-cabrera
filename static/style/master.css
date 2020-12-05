@@ -27,8 +27,10 @@ Table of contents
 23) form
 24) list
 25) space
+26) custom
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i700,700i,800,800i,900,900i&display=swap");
 /*----------------------------------
 * Buttons
 ----------------------------------*/
@@ -558,7 +560,6 @@ h6 {
   @media (min-width: 992px) {
       .main-navbar .navbar-nav > li > a {
         font-size: 15px;
-        font-weight: 600;
         padding: 0 !important;
         line-height: 70px;
         display: block;
@@ -1035,7 +1036,7 @@ h6 {
   max-width: 750px; }
 
 .section {
-  padding: 100px 0; }
+  padding: 75px 0; }
   @media (max-width: 991px) {
     .section {
       padding-top: 80px;
@@ -6180,3 +6181,26 @@ h6 {
         padding: 0 20px; } }
 
 /*# sourceMappingURL=master.css.map */
+
+/*------------------
+*	Custom
+-------------------*/
+.para {
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* SVG Logos
+---------------------------------*/
+.logo-box-1 {
+  background: #ffffff;
+  border-radius: 5px;
+  border: 5px solid transparent; }
+  .logo-box-1 .svg-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    font-size: 54px; }
