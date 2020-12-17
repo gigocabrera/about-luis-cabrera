@@ -1223,11 +1223,11 @@
                         <!-- form -->
                         <div class="contact-form box-shadow-lg white-bg">
                             <div class="sm-title p-25px-b">
-                                <h5 class="dark-color">Drop us a line</h5>
-                                <p class="m-0px">We are here to answer any question you may have</p>
+                                <h5 class="dark-color">Drop me a line</h5>
+                                <p class="m-0px">I'll do my best to answer any question you may have</p>
                                 <i class="far fa-paper-plane"></i>
                             </div>
-                            <form class="contactform" method="post" action="static/php/process-form.php">
+                            <form class="contactform" method="post" action="https://formspree.io/f/mbjpzvqe">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
@@ -1237,7 +1237,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input id="email" type="email" placeholder="Email" name="email"
+                                            <input id="email" type="email" placeholder="Email" name="_replyto"
                                                 class="form-control" required="">
                                         </div>
                                     </div>
@@ -1249,8 +1249,9 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="send">
-                                            <button class="m-btn m-btn-theme" type="submit" name="send">Get in
-                                                touch</button>
+                                            <button class="m-btn m-btn-theme" type="submit" name="send">Get in touch</button>
+                                            <input type="hidden" name="_next" value="{{site.baseurl}}/thanks.html" />
+                                            <input type="hidden" name="_format" value="plain" />
                                         </div>
                                     </div>
 
