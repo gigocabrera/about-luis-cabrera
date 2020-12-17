@@ -31,12 +31,14 @@
 	 * Header Fixed
 	/* ---------------------------------------------- */
 	NAY.HeaderFixd = function() {
-		var HscrollTop  = $(window).scrollTop();  
+		var HscrollTop  = $(window).scrollTop();
 	    if (HscrollTop >= 100) {
-	       $('header').addClass('fixed-header');
+				 $('header').addClass('fixed-header');
+				 $('#gclogo').attr('src', 'static/img/LuisCabreraLogoBlue.svg');
 	    }
 	    else {
-	       $('header').removeClass('fixed-header');
+				 $('header').removeClass('fixed-header');
+				 $('#gclogo').attr('src', 'static/img/LuisCabreraLogoWhite.svg');
 	    }
 	}
 
