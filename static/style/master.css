@@ -6661,12 +6661,22 @@ hr.small {
     text-align: right;
     text-transform: uppercase; 
   }
+  @media only screen and (max-width: 375px) { 
+    .cv-section-title {
+      text-align: left;
+    }
+  }
   .cv-section-title p { 
     margin-bottom: 5px;
     margin-top: -10px;
     font-size: 14px;
   }
   .cv-section-title img { margin-bottom: 5px; margin-top: 15px; float: right !important;}	
+  @media only screen and (max-width: 375px) { 
+    .cv-section-title img { 
+      float: left !important;
+    }
+  }
   .cv-section-title h1 { 
     position: relative;
     padding-bottom: 14px; 
@@ -6678,6 +6688,11 @@ hr.small {
     width: 100px;
     border-bottom: 1px solid #e1e1e1;
     content: "";
+  }
+  @media only screen and (max-width: 375px) { 
+    .cv-section-title h1:after { 
+      left: 0
+    }
   }
   .cv-section-title h1 span { 
     position: relative; 
