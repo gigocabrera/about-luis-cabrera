@@ -33,6 +33,7 @@ Table of contents
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Staatliches:400,700,900&display=swap");
 /*----------------------------------
 * Buttons
 ----------------------------------*/
@@ -6198,6 +6199,110 @@ h6 {
   line-height: 1.9;
 }
 
+/* Quotes
+---------------------------------*/
+.font-quote {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+  font-style: italic;
+  line-height: 1.9;
+}
+.font-quote span {
+  font-family: 'Roboto', Times, serif;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* center the blockquote in the page */
+.blockquote-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.green-bg {
+  background-color: #74EBD5;
+}
+
+/* Blockquote main style */
+.blockquote {
+   position: relative;
+   color: #2e6057;
+   font-family: 'Staatliches', cursive;
+   max-width: 450px;
+   margin: 80px auto;
+   align-self: center;
+   padding: 11rem 1rem 14rem;
+   overflow: hidden;
+}
+
+/* Blockquote header */
+.blockquote h1 {
+   color: #fff;
+   position: relative; /* for pseudos */
+   font-size: 2.5rem;
+   font-weight: normal;
+   line-height: 0.8;
+   margin: 0;
+   z-index: 1;
+}
+
+h1 span {
+ color: #2e6057;
+}
+
+/* Blockquote right double quotes */
+.blockquote h1:after {  
+   content:"’";
+   position: absolute;
+   top: -3rem;
+   left: 0;
+   font-size: 100rem;
+   line-height: 0.7;
+   color: rgba(198, 239, 255, 0.5);
+   /* text-shadow: -3rem -3rem 0 rgba(200, 200, 200, 0.2); */
+   z-index: -1;
+}
+
+.blockquote h1:before {
+   content:"’";
+   position: absolute;
+   top: 0;
+   left: 3rem;
+   font-size: 100rem;
+   line-height: 0.7;
+   color: rgba(198, 239, 255, 0.3);
+   /* text-shadow: 3rem 3rem 0 rgba(206, 255, 246, 0.5); */
+   z-index: -1;
+}
+
+/* increase header size after 600px */
+/* @media all and (min-width: 600px) {
+   .blockquote h1 {
+       font-size: 3rem;
+       line-height: 1.2;
+  }
+
+} */
+
+/* Blockquote subheader */
+.blockquote h4 {
+   position: relative;
+   color: #fff;
+   font-size: 1.2rem;
+   font-family: 'Oswald', sans-serif;
+   font-weight: normal;
+   line-height: 1.1;
+   margin: 0;
+   padding-top: 1.5rem;
+   z-index: 1;
+}
+
+.blockquote h4 a {
+  color: #224841;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
 /* SVG Logos
 ---------------------------------*/
 .logo-box-1 {
@@ -6343,7 +6448,7 @@ h6 {
 /* Block Quote
 ---------------------------------*/
 blockquote {
-  background: #fff;
+  /* background: #fff; */
   border-left: 0px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
