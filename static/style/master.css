@@ -6196,7 +6196,7 @@ h6 {
 .font-gc {
   font-family: Roboto;
   font-size: 17px;
-  line-height: 1.9;
+  line-height: 1.5;
 }
 
 /* Quotes
@@ -6226,7 +6226,7 @@ h6 {
 /* Blockquote main style */
 .blockquote {
    position: relative;
-   color: #2e6057;
+   color: #9d9d9d;
    font-family: 'Staatliches', cursive;
    max-width: 450px;
    margin: 80px auto;
@@ -6239,15 +6239,15 @@ h6 {
 .blockquote h1 {
    color: #fff;
    position: relative; /* for pseudos */
-   font-size: 2.5rem;
+   font-size: 3.5rem;
    font-weight: normal;
-   line-height: 0.8;
+   line-height: 1;
    margin: 0;
    z-index: 1;
 }
 
 h1 span {
- color: #2e6057;
+ color: #9d9d9d;
 }
 
 /* Blockquote right double quotes */
